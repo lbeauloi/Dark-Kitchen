@@ -10,7 +10,7 @@ article.innerHTML = `<figure class="card__figure">
 <h3>${dish.name}</h3>
 <div class="card__footer">
 <p>${dish.prix}€</p>
-<button class="card__button">Add to cart</button>
+<a href="#"><img src="assets/img/addToBag.png" alt="logo plus"></a>
 </div>`;
 starter.appendChild(article);
 article.setAttribute("class", "card");
@@ -24,7 +24,7 @@ plat.forEach((dish) => {
     <h3>${dish.name}</h3>
     <div class="card__footer">
     <p>${dish.prix}€</p>
-    <button class="card__button">Add to cart</button>
+    <a href="#"><img src="assets/img/addToBag.png" alt="logo plus"></a>
     </div>`;
     main.appendChild(article);
     article.setAttribute("class", "card");
@@ -38,7 +38,7 @@ desserts.forEach((dish) => {
     <h3>${dish.name}</h3>
     <div class="card__footer">
     <p>${dish.prix}€</p>
-    <button class="card__button">Add to cart</button>
+    <a href="#"><img src="assets/img/addToBag.png" alt="logo plus"></a>
     </div>`;
     sugar.appendChild(article);
     article.setAttribute("class", "card");
