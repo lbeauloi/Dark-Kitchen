@@ -1,4 +1,4 @@
-const starters = [
+const entree = [
     {
         name: "Feuilletés jambon et mozzarella",
         prix: 8,
