@@ -52,6 +52,18 @@ input {
 font-family: 'Roboto', sans-serif;
 font-weight value from 100 to 900 and italic style available
 */
+.header__shoppingBag img {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: lightgrey;
+}
+
+.menu__container img {
+  width: 35px;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -71,15 +83,6 @@ nav li img {
 nav li:hover {
   background-color: #555;
 }
-
-.header__shoppingBag img {
-  width: 35px;
-  height: 35px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: lightgrey;
-}
-
-.menu__container img {
-  width: 35px;
+nav li a {
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,29 @@
+nav {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      background-color: lightgrey;
+      width: 500px;
+    }
+  
+    li {
+      margin: 0;
+      padding: 10px 20px;
+      color: #fff;
+  
+      img {
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+  
+      &:hover {
+        background-color: #555;
+      }
+
+      a{
+        text-decoration: none;
+      }
+    }
+}
+
