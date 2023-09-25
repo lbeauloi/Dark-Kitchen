@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/scss/style.css">
+    <link rel="stylesheet" href="./scss/style.css">
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dark Kitchen Project</title>
@@ -10,27 +10,35 @@
 </head>
 <body>
 <header>
-<!--    <img class="header__logo" src="assets/img/logo.png" alt="logo de notre resto, représente une fourchette et un couteau">-->
+    <img class="header__logo" src="assets/img/logo.png" alt="logo de notre resto, représente une fourchette et un couteau">
     <div class="header__ImgRestoWrapper hiddenMobile">
     </div>
-    <nav>
-        <ul>
-            <li>Starters</li>
-            <li>Dishes</li>
-            <li>Desserts</li>
-        </ul>
-    </nav>
+
+    <div class="collapsible-menu"><input type="checkbox" id="menu"> <label for="menu"></label>
+        <div class="menu-content">
+            <!-- <a class="burgerButton" href="#"><img src="assets/img/burgermenu.svg" alt="burgermenu icon"></a> -->
+            <ul>
+                <li class="starterButton"><a href="#"><img src="assets/img/sortingStarter.svg" alt="starterIcon">Starters</a></li>
+                <li class="disheButton"><a href="#"><img src="assets/img/sortingDish.svg" alt="disheIcon">Dishes</a></li><li class="dessertButton"><a href="#"><img src="assets/img/sortingDesserts.svg" alt="dessertIcon">Desserts</a></li><li class="allButton"><a href="#"><img src="assets/img/sortingAll.svg" alt="knife and fork icon">All</a></li>
+                <li class="shoppingBagButton"><a href="#"><img src="assets/img/shopping-bag.png" alt="shopping-bag icon"></a></li>
+            </ul>
+        </div>
+    </div>
 
     <div class="header__shoppingBag">
         <img src="assets/img/shopping-bag.png" alt="shopping shopping-bag icon">
     </div>
 </header>
 <main class="menu__container">
+  <a href="#"><img src="assets/img/addToBag.png" alt="logo plus"></a>
     <section class="menu__starter">
+        <article class="card"></article>
     </section>
     <section class="menu__mainDish">
+        <article class="card"></article>
     </section>
     <section class="menu__dessert">
+        <article class="card"></article>
     </section>
 </main>
 
