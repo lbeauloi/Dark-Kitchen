@@ -54,8 +54,16 @@ font-weight value from 100 to 900 and italic style available
   height: 150px;
   background-image: url("/assets/img/resto.png");
   background-size: cover;
-  border-radius: 15%;
+  background-position: 0 89%;
+  border-radius: 10px;
   background-repeat: no-repeat;
+  display: none;
+  margin: 2%;
+}
+@media screen and (min-width: 768px) {
+  .header__ImgRestoWrapper {
+    display: block;
+  }
 }
 
 footer {
