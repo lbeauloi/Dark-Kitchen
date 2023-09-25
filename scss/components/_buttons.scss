@@ -1,0 +1,44 @@
+// sortings buttons
+nav {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      background-color: lightgrey;
+      width: 500px;
+    }
+  
+    li {
+      margin: 0;
+      padding: 10px 20px;
+      color: #fff;
+  
+      img {
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+  
+      &:hover {
+        background-color: #555;
+      }
+    }
+}
+
+
+//shopping bag button
+.header__shoppingBag{
+    img{
+        width: 35px;
+        height: 35px;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: lightgrey
+    }
+}
+// add to shopping bag
+.menu__container{
+    img{
+        width: 35px;
+    }
+}
+
