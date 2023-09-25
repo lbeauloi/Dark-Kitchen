@@ -64,6 +64,10 @@ font-weight value from 100 to 900 and italic style available
   width: 35px;
 }
 
+.nav a {
+  width: 35px;
+}
+
 nav ul {
   list-style: none;
   display: flex;
