@@ -1,3 +1,6 @@
+header {
+  padding: 2%;
+}
 
 .header__ImgRestoWrapper {
   height: 150px;
@@ -7,17 +10,8 @@
   border-radius: 10px;
   background-repeat: no-repeat;
   display: none;
-  margin:2%;
-  
-  @media screen and (min-width: 768px) {
-    display:block;
-  }
+  margin: 2%;
 
 }
 
-.header__logo{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
-}
+

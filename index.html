@@ -11,28 +11,68 @@
 <body>
 <header>
 
-    <img class="header__logo" src="assets/img/logo.png" alt="logo de notre resto, représente une fourchette et un couteau">
-
-    <div class="collapsible-menu"><input type="checkbox" id="menu"> <label for="menu"></label>
-        <div class="menu-content">
-
-            <!-- <a class="burgerButton" href="#"><img src="assets/img/burgermenu.svg" alt="burgermenu icon"></a> -->
-            <ul class="center">
-                <li class="starterButton"><button class="sortingButton"><img src="assets/img/sortingStarter.svg" alt="starterIcon">Starters</button></li>
-                <li class="disheButton"><button class="sortingButton"><img src="assets/img/sortingDish.svg" alt="disheIcon">Dishes</button></li>
-                <li class="dessertButton"><button class="sortingButton"><img src="assets/img/sortingDesserts.svg" alt="dessertIcon">Desserts</button></li>
-                <li class="allButton"><button class="sortingButton"><img src="assets/img/sortingAll.svg" alt="knife and fork icon">All</button></li>
-                <li class="shoppingBagButton"><button class="basketButton"><img src="assets/img/shopping-bag.png" alt="shopping-bag icon"></button></li>
-            </ul>
+    <div class="menuLogo__Wrapper">
+        <div class="header-logo__Wrapper">
+            <img class="header__logo" src="assets/img/logo.png" alt="logo de notre resto, représente une fourchette et un couteau">
         </div>
+
+        <div class="menuBurger__Wrapper">
+            <img class="hiddenDesktop" src="assets/img/burgermenu.svg">
+            <div class="menu-content displayDesktop">
+                <!-- <a class="burgerButton" href="#"><img src="assets/img/burgermenu.svg" alt="burgermenu icon"></a> -->
+                <ul class="center">
+                    <li class="starterButton">
+                        <button class="sortingButton"><img src="assets/img/sortingStarter.svg" alt="starterIcon">
+                            <span>Starters</span>
+                        </button>
+                    </li>
+                    <li class="disheButton">
+                        <button class="sortingButton">
+                            <img src="assets/img/sortingDish.svg" alt="disheIcon">
+                            <span>Dishes</span>
+                        </button>
+                    </li>
+                    <li class="dessertButton">
+                        <button class="sortingButton">
+                            <img src="assets/img/sortingDesserts.svg" alt="dessertIcon">
+                            <span>Desserts</span>
+                        </button>
+                    </li>
+                    <li class="allButton">
+                        <button class="sortingButton">
+                            <img src="assets/img/sortingAll.svg" alt="knife and fork icon">
+                            <span>All</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="header__shoppingBag">
+            <button class="basketButton"><img src="assets/img/shopping-bag.png" alt="shopping shopping-bag icon"></button>
+        </div>
+
+
+        <!--        <div class="collapsible-menu"><input type="checkbox" id="menu">-->
+        <!--            <label for="menu"></label>-->
+        <!--            <div class="menu-content">-->
+        <!--                &lt;!&ndash; <a class="burgerButton" href="#"><img src="assets/img/burgermenu.svg" alt="burgermenu icon"></a> &ndash;&gt;-->
+        <!--                <ul class="center">-->
+        <!--                    <li class="starterButton"><button class="sortingButton"><img src="assets/img/sortingStarter.svg" alt="starterIcon">Starters</button></li>-->
+        <!--                    <li class="disheButton"><button class="sortingButton"><img src="assets/img/sortingDish.svg" alt="disheIcon">Dishes</button></li>-->
+        <!--                    <li class="dessertButton"><button class="sortingButton"><img src="assets/img/sortingDesserts.svg" alt="dessertIcon">Desserts</button></li>-->
+        <!--                    <li class="allButton"><button class="sortingButton"><img src="assets/img/sortingAll.svg" alt="knife and fork icon">All</button></li>-->
+        <!--                    <li class="shoppingBagButton"><button class="basketButton"><img src="assets/img/shopping-bag.png" alt="shopping-bag icon"></button></li>-->
+        <!--                </ul>-->
+        <!--            </div>-->
+        <!--        </div>-->
+
     </div>
 
-    <div class="header__shoppingBag">
-       <button class="basketButton"><img src="assets/img/shopping-bag.png" alt="shopping shopping-bag icon"></button> 
+    <div class="header__ImgRestoWrapper displayDesktop">
     </div>
 
-    <div class="header__ImgRestoWrapper hiddenMobile">
-    </div>
 </header>
 <main class="menu__container">
     <section class="menu__starter">
