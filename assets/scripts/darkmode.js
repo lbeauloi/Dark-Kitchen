@@ -1,9 +1,11 @@
-document.querySelectorAll("li").forEach((item) => {
-  item.addEventListener("click", darkMode);
-});
-
 function darkMode() {
-  let body = document.querySelector("body");
-  let mode = this.dataset.mode;
-  body.dataset.theme = mode;
-}
+    const element = document.body;
+    let cards = document.querySelectorAll(".card");
+    element.classList.toggle("dark-mode");
+    
+    for (let card of cards){
+            card.style.backgroundColor = "#313446";
+        }
+ }
+
+
