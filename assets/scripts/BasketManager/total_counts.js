@@ -1,4 +1,7 @@
-﻿//Display the total count on the basket element
+﻿import{entree,plat,desserts} from "../data.js";
+
+//Display the total count on the basket element
+
 function DisplayItemCount() {
 
     let totalCount = GetItemsCountInBasket();

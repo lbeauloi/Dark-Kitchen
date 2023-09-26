@@ -150,3 +150,5 @@ const desserts = [
         affiche: "assets/img/corne_gazelle.jpg",
     },
 ]
+
+export{entree,plat,desserts}

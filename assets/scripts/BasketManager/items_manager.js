@@ -1,4 +1,5 @@
 ﻿import{SetDecrementInBasketListener, SetIncrementInBasketListener} from "./basket_listeners.js";
+import{entree, plat, desserts} from "../data.js";
 
 function AddItemToBasket(productId) {
 
