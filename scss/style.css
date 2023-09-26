@@ -225,7 +225,20 @@ font-weight value from 100 to 900 and italic style available
   gap: 10px;
 }
 .navbar__rightWrapper__menuBurgerWrapper {
-  display: flex;
+  position: relative;
+}
+.navbar__rightWrapper__menuBurgerWrapper__burgerImg {
+  width: 50px;
+  height: 50px;
+}
+.navbar__rightWrapper__menuBurgerWrapper__content {
+  position: absolute;
+  top: 20px;
+}
+.navbar__rightWrapper__menuBurgerWrapper__content ul {
+  background-color: white;
+  width: 200px;
+  height: auto;
 }
 
 /* Import title font and default test font */
