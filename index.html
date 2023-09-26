@@ -1,60 +1,85 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="./scss/style.css">
-    <meta charset="UTF-8"/>
+  <head>
+    <link rel="stylesheet" href="./scss/style.css" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dark Kitchen Project</title>
     <script src="assets/scripts/data.js"></script>
     <script async defer src="assets/scripts/inject_cards_script.js"></script>
-</head>
-<body>
-<header>
-    <img class="header__logo" src="assets/img/logo.png" alt="logo de notre resto, représente une fourchette et un couteau">
-    <div class="header__ImgRestoWrapper hiddenMobile">
-    </div>
+    <script async defer src="assets/scripts/sort_cards_script.js"></script>
+  </head>
+  <body>
+    <header>
+      <img
+        class="header__logo"
+        src="assets/img/logo.png"
+        alt="logo de notre resto, représente une fourchette et un couteau"
+      />
+      <div class="header__ImgRestoWrapper hiddenMobile"></div>
 
-    <div class="collapsible-menu"><input type="checkbox" id="menu"> <label for="menu"></label>
+      <div class="collapsible-menu">
+        <input type="checkbox" id="menu" /> <label for="menu"></label>
         <div class="menu-content">
-            <!-- <a class="burgerButton" href="#"><img src="assets/img/burgermenu.svg" alt="burgermenu icon"></a> -->
-            <ul>
-                <li class="starterButton"><a href="#"><img src="assets/img/sortingStarter.svg" alt="starterIcon">Starters</a></li>
-                <li class="disheButton"><a href="#"><img src="assets/img/sortingDish.svg" alt="disheIcon">Dishes</a></li><li class="dessertButton"><a href="#"><img src="assets/img/sortingDesserts.svg" alt="dessertIcon">Desserts</a></li><li class="allButton"><a href="#"><img src="assets/img/sortingAll.svg" alt="knife and fork icon">All</a></li>
-                <li class="shoppingBagButton"><a href="#"><img src="assets/img/shopping-bag.png" alt="shopping-bag icon"></a></li>
-            </ul>
+          <!-- <a class="burgerButton" href="#"><img src="assets/img/burgermenu.svg" alt="burgermenu icon"></a> -->
+          <ul>
+            <li><button class="sortingButton starter"><img src="assets/img/sortingStarter.svg" alt="starterIcon">Starters</button></li>
+            <li><button class="sortingButton dish"><img src="assets/img/sortingDish.svg" alt="disheIcon">Dishes</button></li>
+            <li><button class="sortingButton dessert"><img src="assets/img/sortingDesserts.svg" alt="dessertIcon">Desserts</button></li>
+            <li><button class="sortingButton all"><img src="assets/img/sortingAll.svg" alt="knife and fork icon">All</button></li>
+            <li><button class="basketButton"><img src="assets/img/shopping-bag.png" alt="shopping-bag icon"></button></li>
+          </ul>
         </div>
-    </div>
+      </div>
 
-    <div class="header__shoppingBag">
-        <img src="assets/img/shopping-bag.png" alt="shopping shopping-bag icon">
-    </div>
-</header>
-<main class="menu__container">
-    <section class="menu__starter">
-    </section>
-    <section class="menu__mainDish">
-    </section>
-    <section class="menu__dessert">
-    </section>
-</main>
+      <div class="header__shoppingBag">
+        <img
+          src="assets/img/shopping-bag.png"
+          alt="shopping shopping-bag icon"
+        />
+      </div>
+    </header>
+    <main class="menu__container">
+      <section class="menu__starter"></section>
+      <section class="menu__mainDish"></section>
+      <section class="menu__dessert"></section>
+    </main>
 
-<footer class="center">
-    <img alt="Logo" src="assets/img/logo.png" class="c-footer__logo">
-    <div class="c-footer__linksWrapper">
+    <footer class="center">
+      <img alt="Logo" src="assets/img/logo.png" class="c-footer__logo" />
+      <div class="c-footer__linksWrapper">
         <ul>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Terms And Conditions</a></li>
-            <li><a href="">Contact Us</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Terms And Conditions</a></li>
+          <li><a href="">Contact Us</a></li>
         </ul>
-    </div>
-    <div class="c-footer__followUsWrapper">
-        <p class="c-footer__followUsText"> Follow Us!</p>
+      </div>
+      <div class="c-footer__followUsWrapper">
+        <p class="c-footer__followUsText">Follow Us!</p>
         <ul class="c-footer__iconWrapper">
-            <li class="footer__iconsItem"><img src="./assets/img/facebook.svg" alt="facebookIcon" class="footer__icons"></li>
-            <li class="footer__iconsItem"><img src="./assets/img/instagram.svg" alt="instagramIcon" class="footer__icons"></li>
-            <li class="footer__iconsItem"><img src="./assets/img/twitter.svg" alt="twitterIcon" class="footer__icons"></li>
+          <li class="footer__iconsItem">
+            <img
+              src="./assets/img/facebook.svg"
+              alt="facebookIcon"
+              class="footer__icons"
+            />
+          </li>
+          <li class="footer__iconsItem">
+            <img
+              src="./assets/img/instagram.svg"
+              alt="instagramIcon"
+              class="footer__icons"
+            />
+          </li>
+          <li class="footer__iconsItem">
+            <img
+              src="./assets/img/twitter.svg"
+              alt="twitterIcon"
+              class="footer__icons"
+            />
+          </li>
         </ul>
-    </div>
-</footer>
-</body>
+      </div>
+    </footer>
+  </body>
 </html>
