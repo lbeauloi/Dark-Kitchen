@@ -1,27 +1,45 @@
-﻿.basketContent{
+﻿.header__shoppingBag {
+
+  .basketButton {
+    position: relative;
+    
+    .countBasket {
+      position: absolute;
+      top: 35px;
+      right: 15px;
+      background-color: #ff1616;
+      font-family: $card-font-family;
+      font-size: 0.7em;
+      border-radius: 100%;
+      padding: 2px 2px;
+    }
+  }
+}
+.basketContent{
   background-color: white;
   color:black;
   display: flex;
+  font-family: $card-font-family;
+  font-size: 0.7em;
   flex-direction: column;
-  width: fit-content;
-  height: auto;
-  padding: 10px, 10px;
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px;
+  border-radius: 10px;
 
+.totalBasket {
+  text-align: right;
+}
 }
 
 .basketItem{
   display: flex;
   flex-direction: row;
-  background-color: white;
   color:black;
   
-  p{
-    margin:3%;
-  }
   
   button{
     width:15px;
     height:auto;
-    margin:1%
   }
 }
