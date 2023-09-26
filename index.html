@@ -8,10 +8,13 @@
     <script src="assets/scripts/data.js"></script>
     <script async defer src="assets/scripts/inject_cards_script.js"></script>
     <script async defer src="assets/scripts/sort_cards_script.js"></script>
-    <script async defer src="assets/scripts/add_to_basket.js"></script>
+    <script async defer src="assets/scripts/darkmode.js"></script>
+    <script async defer src="assets/scripts/backToTopPage.js"></script>
+    <script async defer type="module" src="assets/scripts/BasketManager/basket_listeners.js"></script>
   </head>
   <body>
     <header>
+    <button class="ToTopButton"></button>
       <nav class="navbar">
         <div class="navbar__letfWrapper">
           <div class="navbar__leftWrapper__logoWrapper">
@@ -69,16 +72,12 @@
                 </li>
               </ul>
             </div>
-          </div>
-
-          <div class="header__shoppingBag">
-            <button class="basketButton">
-              <img
-                src="assets/img/shopping-bag.png"
-                alt="shopping shopping-bag icon"
-              />
-              <div class="countBasket">0</div>
-            </button>
+        </div>
+    </div>
+    <div class="header__shoppingBag">
+        <button class="basketButton">
+            <img src="assets/img/shopping-bag.png" alt="shopping shopping-bag icon"/>
+        </button>
 
             <div class="basketContent">
               <p class="totalBasket">Total: 0 &euro;</p>
