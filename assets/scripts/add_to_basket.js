@@ -1,22 +1,28 @@
-﻿let addToBasketBtns = document.querySelectorAll(".addToBasket");
+﻿//Get all "add" button
+let addToBasketBtns = document.querySelectorAll(".addToBasket");
 let basketCount = 0;
 
-// function GetItemCount(itemName) {
-//
-//     let itemCount;
-//
-//     let basketItems = document.querySelectorAll(".basketContent.basketItem");
-//
-//     let itemInBasket = Array.from(basketItems).find(i => i.querySelector(".itemName").innerText === itemName.innerText.split(' ')[0])
-//
-//     if (itemInBasket == null) {
-//         itemCount = 0;
-//     } else {
-//         itemCount = itemInBasket.querySelector(".itemCount");
-//     }
-//
-//     return itemCount;
-// }
+//EventListener to add an item in the basket
+for (let btn of addToBasketBtns) {
+    btn.addEventListener('click', function () {
+
+        basketCount++;
+        let currentCard = btn.closest(".card");
+
+        //check if item already exists in basket 
+        let basketItem = GetBasketItemFromCard(currentCard);
+
+        if (basketItem !== undefined) {
+            //if it does, increment the count for this item
+            incrementBasketItemCount(basketItem);
+        } else {
+            //If not - create item
+            addItemToBasket(currentCard.querySelector(".itemName").innerText, currentCard.querySelector(".itemPrice").innerText);
+        }
+
+
+    })
+}
 
 function addItemToBasket(itemName, itemPrice) {
 
@@ -31,59 +37,55 @@ function addItemToBasket(itemName, itemPrice) {
               <button class="removeItem">-</button>
               <p class="itemCount">1</p>
               <button class="addItem">+</button>`
-    //Add button listeners
 
-    basketItem.querySelector(".addItem").addEventListener('click', function () {
-        basketItem.querySelector(".itemCount").innerText++;
-    });
+    //Add button listeners for add and remove button directly in the basket
 
-    basketItem.querySelector(".removeItem").addEventListener('click', function () {
-        let currentCount = basketItem.querySelector(".itemCount").innerText;
-
-        if (Number(currentCount) > 1) {
-            basketItem.querySelector(".itemCount").innerText--;
-        } else if (Number(currentCount) === 1) {
-
-            //remove item from basket
-
-            basketItem.remove();
-        }
-
-    });
+    setIncrementInBasketListener(basketItem);
+    SetDecrementInBasketListener(basketItem);
 
     //Add item to basket
     basketContent.appendChild(basketItem);
 }
 
-function incrementItemCount(currentItem) {
+function setIncrementInBasketListener(basketItem) {
+    basketItem.querySelector(".addItem").addEventListener('click', function () {
 
+        incrementBasketItemCount(basketItem);
+    });
+}
+
+function SetDecrementInBasketListener(basketItem) {
+
+    basketItem.querySelector(".removeItem").addEventListener('click', function () {
+
+        DecrementBasketItemCount(basketItem);
+    });
+}
+
+function incrementBasketItemCount(basketItem) {
+
+    basketItem.querySelector(".itemCount").innerText++;
+
+
+}
+function DecrementBasketItemCount(basketItem) {
+    let currentCount = basketItem.querySelector(".itemCount").innerText;
+
+    if (Number(currentCount) > 1) {
+        basketItem.querySelector(".itemCount").innerText--;
+    } else if (Number(currentCount) === 1) {
+
+        //remove item from basket when count == 0;
+        basketItem.remove();
+    }
+}
+
+function GetBasketItemFromCard(card) {
     let basketItems = document.querySelectorAll(".basketContent>.basketItem");
-    let itemInBasket = Array.from(basketItems).find(i => i.querySelector(".itemName").innerText === currentItem.querySelector(".itemName").innerText.split(' ')[0])
-    itemInBasket.querySelector(".itemCount").innerText++;
+
+    return Array.from(basketItems)
+        .find(i => i.querySelector(".itemName").innerText === card.querySelector(".itemName").innerText.split(' ')[0]);
 }
 
-function isAlreadyInBasket(currentItem) {
-
-    let basketItems = document.querySelectorAll(".basketContent>.basketItem");
-    let itemInBasket = Array.from(basketItems).find(i => i.querySelector(".itemName").innerText === currentItem.querySelector(".itemName").innerText.split(' ')[0])
-
-    return itemInBasket !== undefined;
-
-}
-
-for (let btn of addToBasketBtns) {
-    btn.addEventListener('click', function () {
-
-        basketCount++;
-        let currentItem = btn.closest(".card");
-
-        //check if item already in 
-        if (isAlreadyInBasket(currentItem)) {
-            incrementItemCount(currentItem);
-        } else {
-            addItemToBasket(currentItem.querySelector(".itemName").innerText, currentItem.querySelector(".itemPrice").innerText);
-        }
 
 
-    })
-}
