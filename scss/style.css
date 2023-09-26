@@ -233,7 +233,7 @@ font-weight value from 100 to 900 and italic style available
 }
 .navbar__rightWrapper__menuBurgerWrapper__content {
   position: absolute;
-  top: 20px;
+  top: 500px;
 }
 .navbar__rightWrapper__menuBurgerWrapper__content ul {
   background-color: white;
