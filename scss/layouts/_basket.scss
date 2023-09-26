@@ -1,0 +1,25 @@
+﻿.basketContent{
+  background-color: white;
+  color:black;
+  display: flex;
+  flex-direction: column;
+  margin-right:5%;
+
+}
+
+.basketItem{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  color:black;
+  
+  p{
+    margin:3%;
+  }
+  
+  button{
+    width:15px;
+    height:auto;
+    margin:1%
+  }
+}

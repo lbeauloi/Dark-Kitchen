@@ -357,5 +357,27 @@ footer {
     width: 2%;
   }
 }
+.basketContent {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+}
+
+.basketItem {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  color: black;
+}
+.basketItem p {
+  margin: 3%;
+}
+.basketItem button {
+  width: 15px;
+  height: auto;
+  margin: 1%;
+}
 
 /*# sourceMappingURL=style.css.map */

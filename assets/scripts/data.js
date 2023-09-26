@@ -106,7 +106,7 @@ const desserts = [
         affiche: "assets/img/peches_roties.webp",
     },
     {
-        name: "Tiramisu aux myrtilles",
+        name: "Pannacotta aux myrtilles",
         prix: 14,
         affiche: "assets/img/tiramisu_myrtilles.webp",
     },
