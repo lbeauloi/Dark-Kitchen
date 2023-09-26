@@ -1,0 +1,21 @@
+﻿@import "../abstracts/fonts";
+
+body{
+  background-color: $background-color;
+  display:flex;
+  flex-direction: column;
+}
+
+
+.hiddenDesktop{
+
+  @media screen and (min-width:769px){
+    display:none;
+  }
+}
+
+.displayDesktop{
+  @media screen and (min-width:769px){
+    display:block;
+  }
+}
