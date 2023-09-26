@@ -1,9 +1,20 @@
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 10px;
     display: flex;
+    width: 100%;
+    flex-direction: row;
     justify-content: space-between;
     &__leftWrapper {
         display: flex;
-        
+        flex-direction: row;
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
 
         &__logoWrapper {
             width: 50px;
@@ -14,6 +25,22 @@
                 height: 100%;
             }
         }
+    }
+
+    &__rightWrapper {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        &__menuBurgerWrapper{
+            display: flex;
+            
+        }
+
     }
 }
 
