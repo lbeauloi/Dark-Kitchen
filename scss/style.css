@@ -15,7 +15,9 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
 }
 
 footer, header, nav, section, main {
@@ -89,12 +91,14 @@ font-weight value from 100 to 900 and italic style available
 }
 .card__figure {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card__figure img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px 10px 10px 10px;
 }
 .card h3 {
@@ -153,6 +157,7 @@ font-weight value from 100 to 900 and italic style available
 .menu-content ul {
   margin-top: 2%;
   list-style: none;
+  width: -moz-fit-content;
   width: fit-content;
   display: block;
   border-radius: 2px;
@@ -283,7 +288,8 @@ header {
   align-items: flex-start;
   justify-content: center;
   row-gap: 1rem;
-  column-gap: 1rem;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
 }
 
 footer {
@@ -362,7 +368,10 @@ footer {
   color: black;
   display: flex;
   flex-direction: column;
-  margin-right: 5%;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  padding: 10px, 10px;
 }
 
 .basketItem {
@@ -378,6 +387,4 @@ footer {
   width: 15px;
   height: auto;
   margin: 1%;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
