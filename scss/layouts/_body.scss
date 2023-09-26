@@ -4,7 +4,12 @@ body{
   background-color: $background-color;
 }
 .dark-mode{
-  background-color: black;
+  transition: 350ms ease-in-out;
+  background-color: #20222e;
   color: white;
+  .card{
+    background-color: #313446;
+    color: white;
+  }
 }
 
