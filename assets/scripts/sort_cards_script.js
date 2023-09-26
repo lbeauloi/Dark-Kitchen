@@ -32,7 +32,7 @@ buttonStarter.addEventListener("click", () => {
       section.style.display = "block";
     });
   }
-  
+
   function filterMenuByCategory(category) {
     console.log(`Filtering by category: ${category}`);
   
