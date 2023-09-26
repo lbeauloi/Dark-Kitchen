@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -57,7 +58,7 @@ font-weight value from 100 to 900 and italic style available
   height: 35px;
   padding: 5px;
   border-radius: 5px;
-  background-color: lightgrey;
+  background-color: #EBE3D9;
 }
 
 .menu__container img {
@@ -113,28 +114,37 @@ font-weight value from 100 to 900 and italic style available
   border-radius: 0 0 10px 10px;
 }
 
+/* Import title font and default test font */
+/*
+font-family: 'Roboto', sans-serif;
+font-weight value from 100 to 900 and italic style available
+*/
 #menu {
   display: none;
 }
 
 .menu-content ul {
+  margin-top: 2%;
   list-style: none;
   display: flex;
   justify-content: space-around;
-  background-color: lightgrey;
+  background-color: #EBE3D9;
   width: 500px;
+  border-radius: 2px;
 }
 .menu-content li {
-  margin: 0;
+  margin: 0 2%;
   padding: 10px 20px;
   color: #fff;
+  background-color: #f9f6f3;
+  border-radius: 4px;
 }
 .menu-content li img {
   width: 40px;
   height: 40px;
   padding: 5px;
   border-radius: 5px;
-  background-color: lightgrey;
+  background-color: #EBE3D9;
 }
 .menu-content li img {
   vertical-align: middle;
@@ -153,7 +163,6 @@ font-weight value from 100 to 900 and italic style available
     list-style: none;
     display: flex;
     justify-content: space-around;
-    background-color: lightgrey;
     width: 500px;
   }
   .menu-content li {
@@ -224,11 +233,9 @@ font-weight value from 100 to 900 and italic style available
   list-style: none;
   display: flex;
   justify-content: space-around;
-  background-color: lightgrey;
   width: 500px;
 }
 .menu-content li {
-  margin: 0;
   padding: 10px 20px;
   color: #fff;
 }
@@ -237,7 +244,6 @@ font-weight value from 100 to 900 and italic style available
   height: 35px;
   padding: 5px;
   border-radius: 5px;
-  background-color: lightgrey;
 }
 .menu-content li img {
   vertical-align: middle;
