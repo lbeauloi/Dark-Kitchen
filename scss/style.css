@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -12,9 +14,7 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: none;
-     -moz-text-size-adjust: none;
-          text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 footer, header, nav, section, main {
@@ -68,10 +68,15 @@ font-weight value from 100 to 900 and italic style available
   width: 35px;
 }
 
+/* Import title font and default test font */
+/*
+font-family: 'Roboto', sans-serif;
+font-weight value from 100 to 900 and italic style available
+*/
 .card {
   font-family: "Roboto", sans-serif;
-  color: white;
-  background-color: rgb(23, 124, 212);
+  color: black;
+  background-color: #f9f6f3;
   width: 25rem;
   height: 25rem;
   display: flex;
@@ -83,14 +88,12 @@ font-weight value from 100 to 900 and italic style available
 }
 .card__figure {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .card__figure img {
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px 10px 10px 10px;
 }
 .card h3 {
@@ -248,6 +251,15 @@ font-weight value from 100 to 900 and italic style available
   color: black;
 }
 
+/* Import title font and default test font */
+/*
+font-family: 'Roboto', sans-serif;
+font-weight value from 100 to 900 and italic style available
+*/
+body {
+  background-color: #EBE3D9;
+}
+
 .header__ImgRestoWrapper {
   height: 150px;
   background-image: url("/assets/img/resto.png");
@@ -264,6 +276,13 @@ font-weight value from 100 to 900 and italic style available
   }
 }
 
+.header__logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
 .menu__container {
   display: flex;
   flex-direction: row;
@@ -271,8 +290,7 @@ font-weight value from 100 to 900 and italic style available
   align-items: flex-start;
   justify-content: center;
   row-gap: 1rem;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
 }
 
 footer {
@@ -345,4 +363,6 @@ footer {
   .footer__icons {
     width: 2%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

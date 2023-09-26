@@ -1,7 +1,9 @@
+@import "../abstracts/fonts";
+
 .card{
     font-family: $card-font-family;
-    color: $card-font-color;
-    background-color: $card-bakcground-color;
+    color: $font-color;
+    background-color: $card-background-color;
     width: 25rem;
     height: 25rem;
     display: flex;
