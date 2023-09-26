@@ -27,5 +27,16 @@ body{
     background-color: #313446;
     color: white;
   }
+  footer{
+    a{
+      color:white;
+    }
+    
+    .footer__iconsItem{
+      img{
+        filter:invert(1);
+      }
+    }
+  }
 }
 
