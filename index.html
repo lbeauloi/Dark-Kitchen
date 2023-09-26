@@ -5,10 +5,11 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dark Kitchen Project</title>
+    <script defer src="assets/scripts/darkmode.js"></script>
     <script src="assets/scripts/data.js"></script>
     <script async defer src="assets/scripts/inject_cards_script.js"></script>
 </head>
-<body>
+<body data-theme="dark">
 <header>
 
     <img class="header__logo" src="assets/img/logo.png" alt="logo de notre resto, représente une fourchette et un couteau">
@@ -22,6 +23,12 @@
                 <li class="disheButton"><a href="#"><img src="assets/img/sortingDish.svg" alt="disheIcon">Dishes</a></li><li class="dessertButton"><a href="#"><img src="assets/img/sortingDesserts.svg" alt="dessertIcon">Desserts</a></li><li class="allButton"><a href="#"><img src="assets/img/sortingAll.svg" alt="knife and fork icon">All</a></li>
                 <li class="shoppingBagButton"><a href="#"><img src="assets/img/shopping-bag.png" alt="shopping-bag icon"></a></li>
             </ul>
+            <div class="darkmode__container">
+                <ul>
+                  <li data-mode="light">Light</li>
+                  <li data-mode="dark">Dark</li>
+                </ul>
+            </div>
         </div>
     </div>
 

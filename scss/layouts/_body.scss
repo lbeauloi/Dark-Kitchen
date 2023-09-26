@@ -2,4 +2,34 @@
 
 body{
   background-color: $background-color;
+  background-color: var(--bg-color);
+}
+
+.darkmode__container {
+  width: 50%;
+  margin: auto;
+  padding: 100px 0;
+}
+
+.darkmode__container ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.darkmode__container ul li {
+  color: var(--links);
+  cursor: pointer;
+}
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --links: #000000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #21232f;
+  --links: #FFFFFF;
 }
