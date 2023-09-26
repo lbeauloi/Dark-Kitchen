@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -14,9 +15,7 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: none;
-     -moz-text-size-adjust: none;
-          text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 footer, header, nav, section, main {
@@ -59,7 +58,7 @@ font-weight value from 100 to 900 and italic style available
   height: 35px;
   padding: 5px;
   border-radius: 5px;
-  background-color: lightgrey;
+  background-color: #EBE3D9;
 }
 
 .menu__container img {
@@ -90,14 +89,12 @@ font-weight value from 100 to 900 and italic style available
 }
 .card__figure {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .card__figure img {
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px 10px 10px 10px;
 }
 .card h3 {
@@ -117,32 +114,69 @@ font-weight value from 100 to 900 and italic style available
   border-radius: 0 0 10px 10px;
 }
 
-#menu {
-  display: none;
+/* Import title font and default test font */
+/*
+font-family: 'Roboto', sans-serif;
+font-weight value from 100 to 900 and italic style available
+*/
+.menuLogo__Wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
 }
 
+.header-logo__Wrapper {
+  grid-row: 1/3;
+  align-self: center;
+}
+.header-logo__Wrapper .header__logo {
+  width: 18vw;
+}
+
+.menuBurger__Wrapper {
+  grid-column: 3;
+  align-self: center;
+  justify-self: end;
+}
+.menuBurger__Wrapper img {
+  width: 10vw;
+}
+
+.menuBurger__Wrapper:hover .menu-content {
+  display: block;
+}
+
+.menu-content {
+  display: none;
+  margin-bottom: 15%;
+}
 .menu-content ul {
+  margin-top: 2%;
   list-style: none;
-  display: flex;
-  justify-content: space-around;
-  background-color: lightgrey;
-  width: 500px;
+  width: fit-content;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  right: 1%;
 }
 .menu-content li {
-  margin: 0;
-  padding: 10px 20px;
-  color: #fff;
+  margin: 0 2%;
+  border-radius: 4px;
+}
+.menu-content li button {
+  background-color: #EBE3D9;
+  border-radius: 5px;
+  width: 80px;
+  height: 80px;
 }
 .menu-content li img {
-  width: 40px;
-  height: 40px;
+  width: 60%;
   padding: 5px;
   border-radius: 5px;
-  background-color: lightgrey;
-}
-.menu-content li img {
+  background-color: #EBE3D9;
+  display: block;
+  margin: 0 auto;
   vertical-align: middle;
-  margin-right: 5px;
 }
 .menu-content li:hover {
   background-color: #555;
@@ -152,165 +186,58 @@ font-weight value from 100 to 900 and italic style available
   color: black;
 }
 
-@media screen and (max-width: 768px) {
+.header__shoppingBag {
+  grid-row: 1;
+  grid-column: 3;
+  align-self: center;
+  justify-self: end;
+}
+.header__shoppingBag img {
+  width: 10vw;
+  height: auto;
+}
+.header__shoppingBag button {
+  background-color: #EBE3D9;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .menuLogo__Wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .menuLogo__Wrapper button {
+    width: 80px;
+    height: 80px;
+  }
+  .menuLogo__Wrapper button img {
+    width: 60%;
+    height: auto;
+  }
+  .menuBurger__Wrapper {
+    width: 100%;
+    grid-row: 1/3;
+    grid-column: 2;
+    justify-self: start;
+    text-align: center;
+  }
+  .menu-content {
+    display: inline;
+    margin-top: 2%;
+    margin-bottom: 0;
+  }
   .menu-content ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    background-color: lightgrey;
-    width: 500px;
+    position: static;
+    display: inline;
   }
   .menu-content li {
-    padding: 10px 20px;
-    color: #fff;
+    display: inline;
   }
-  .menu-content li img {
-    vertical-align: middle;
-    margin-right: 5px;
-  }
-  .menu-content li:hover {
-    background-color: #555;
-  }
-  .menu-content li a {
-    text-decoration: none;
-  }
-  .menu-content {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    padding: 0 0 0 50px;
-  }
-  .collapsible-menu {
-    background-color: rgb(255, 255, 255);
-    padding: 0px 30px;
-  }
-  .collapsible-menu ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  .collapsible-menu a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-  }
-  .collapsible-menu label {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 32px;
-    display: block;
-    cursor: pointer;
-    background: url(/assets/img/burgermenu.svg) no-repeat left center;
-    background-size: 25px;
-    padding: 10px 0 10px 20px;
-  }
-  input#menu {
-    display: none;
-  }
-  input:checked + label {
-    background-image: url(/assets/img/burgermenuclosing.svg);
-  }
-  .menu-content {
-    max-height: 0;
-    overflow: hidden;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    padding: 0 0 0 40px;
-  }
-  /* Toggle Effect */
-  input:checked ~ label {
-    background-image: url(/assets/img/burgermenuclosing.svg);
-  }
-  input:checked ~ .menu-content {
-    max-height: 100%;
+  .header__shoppingBag {
+    grid-row: 1/3;
   }
 }
-#menu {
-  display: none;
-}
-
-.menu-content ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  background-color: lightgrey;
-  width: 500px;
-}
-.menu-content li {
-  margin: 0;
-  padding: 10px 20px;
-  color: #fff;
-}
-.menu-content li img {
-  width: 35px;
-  height: 35px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: lightgrey;
-}
-.menu-content li img {
-  vertical-align: middle;
-  margin-right: 5px;
-}
-.menu-content li:hover {
-  background-color: #555;
-}
-.menu-content li a {
-  text-decoration: none;
-  color: black;
-}
-
-.toggle-switch {
-  position: relative;
-  width: 100px;
-  height: 50px;
-  --light: #d8dbe0;
-  --dark: #28292c;
-  --link: rgb(27, 129, 112);
-  --link-hover: rgb(24, 94, 82);
-}
-
-.switch-label {
-  position: absolute;
-  width: 100%;
-  height: 50px;
-  background-color: var(--dark);
-  border-radius: 25px;
-  cursor: pointer;
-  border: 3px solid var(--dark);
-}
-
-.checkbox {
-  position: absolute;
-  display: none;
-}
-
-.slider {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-  transition: 0.3s;
-}
-
-.checkbox:checked ~ .slider {
-  background-color: var(--light);
-}
-
-.slider::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  box-shadow: inset 12px -4px 0px 0px var(--light);
-  background-color: var(--dark);
-  transition: 0.3s;
-}
-
-.checkbox:checked ~ .slider::before {
-  transform: translateX(50px);
-  background-color: var(--dark);
-  box-shadow: none;
-}
-
 /* Import title font and default test font */
 /*
 font-family: 'Roboto', sans-serif;
@@ -318,16 +245,24 @@ font-weight value from 100 to 900 and italic style available
 */
 body {
   background-color: #EBE3D9;
+  display: flex;
+  flex-direction: column;
 }
 
-.dark-mode {
-  transition: 350ms ease-in-out;
-  background-color: #20222e;
-  color: white;
+@media screen and (min-width: 769px) {
+  .hiddenDesktop {
+    display: none;
+  }
 }
-.dark-mode .card {
-  background-color: #313446;
-  color: white;
+
+@media screen and (min-width: 769px) {
+  .displayDesktop {
+    display: block;
+  }
+}
+
+header {
+  padding: 2%;
 }
 
 .header__ImgRestoWrapper {
@@ -340,18 +275,6 @@ body {
   display: none;
   margin: 2%;
 }
-@media screen and (min-width: 768px) {
-  .header__ImgRestoWrapper {
-    display: block;
-  }
-}
-
-.header__logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
-}
 
 .menu__container {
   display: flex;
@@ -360,8 +283,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   row-gap: 1rem;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
 }
 
 footer {
@@ -434,4 +356,6 @@ footer {
   .footer__icons {
     width: 2%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
