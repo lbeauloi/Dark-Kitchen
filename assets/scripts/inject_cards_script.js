@@ -14,7 +14,7 @@ function generateMenuItem(category, menuData) {
       <h3>${dish.name}</h3>
       <div class="card__footer">
         <p>${dish.prix}€</p>
-        <a href="#"><img src="assets/img/addToBag.png" alt="Add to Bag"></a>
+        <button class = "addToBasket"><img src="assets/img/addToBag.png" alt="Add to Bag"></button>
       </div>
     `;
 
