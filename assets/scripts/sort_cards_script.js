@@ -29,7 +29,7 @@ buttonStarter.addEventListener("click", () => {
   function showAllMenuItems() {
     const menuSections = document.querySelectorAll(".menu__container section");
     menuSections.forEach((section) => {
-      section.style.display = "block";
+      section.style.display = "flex";
     });
   }
 
@@ -40,6 +40,6 @@ buttonStarter.addEventListener("click", () => {
   
     const categorySection = document.querySelector(`.menu__${category}`);
     console.log(`Displaying section: ${categorySection}`);
-    categorySection.style.display = "block";
+    categorySection.style.display = "flex";
   }
   
