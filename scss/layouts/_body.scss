@@ -25,8 +25,8 @@ body{
   transition: 350ms ease-in-out;
   background-color: #20222e;
   color: white;
-  .menuBurgerImg{
-    filter: invert(1);
+  .hamburger-lines .line{
+    background: white;
   }
   header{  
     .ToTopButton{

@@ -219,28 +219,120 @@ font-weight value from 100 to 900 and italic style available
   display: flex;
   flex-direction: row;
   width: auto;
-  height: 100%;
+  height: auto;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-}
-.navbar__rightWrapper__menuBurgerWrapper {
-  position: relative;
+  gap: 0 50px;
 }
 .navbar__rightWrapper__menuBurgerWrapper__burgerImg {
   width: 50px;
   height: 50px;
 }
-.navbar__rightWrapper__menuBurgerWrapper__content {
-  position: absolute;
-  top: 500px;
+.navbar__rightWrapper__menuBurgerWrapper .menu-items {
+  display: flex;
+  gap: 0 10px;
+  justify-content: center;
+  align-items: center;
 }
-.navbar__rightWrapper__menuBurgerWrapper__content ul {
-  background-color: white;
-  width: 200px;
-  height: auto;
+.navbar__rightWrapper__menuBurgerWrapper .menu-items .sortingButton {
+  border-radius: 10px;
+  background-color: #f9f6f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  cursor: pointer;
+  border: none;
 }
 
+.hamburger,
+.hamburger-lines {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger,
+  .hamburger-lines {
+    display: block;
+  }
+  .navbar__rightWrapper__menuBurgerWrapper {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+  .navbar__rightWrapper__menuBurgerWrapper .hamburger {
+    position: relative;
+    display: block;
+    height: 32px;
+    width: 30px;
+    z-index: 5;
+    opacity: 0;
+  }
+  .hamburger-lines {
+    position: absolute;
+    top: 10px;
+    display: block;
+    height: 23px;
+    width: 35px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: black;
+  }
+  .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .menu-items {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: #EBE3D9;
+    height: 280px;
+    width: 100px;
+    box-shadow: 8px 9px 18px 9px rgba(56, 56, 56, 0.83);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 10px;
+    transform-origin: 0% 0%;
+    transform: translate(150%, 0);
+    transition: transform 0.5s ease-in-out;
+  }
+  .menu-items li {
+    padding: 10px;
+  }
+  .navbar__rightWrapper__menuBurgerWrapper .hamburger:checked ~ .menu-items {
+    transform: none;
+  }
+  .hamburger:checked ~ .hamburger-lines .line1 {
+    transform: rotate(35deg);
+  }
+  .hamburger:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  .hamburger:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-35deg);
+  }
+}
 /* Import title font and default test font */
 /*
 font-family: 'Roboto', sans-serif;
@@ -263,8 +355,8 @@ body {
   background-color: #20222e;
   color: white;
 }
-.dark-mode .menuBurgerImg {
-  filter: invert(1);
+.dark-mode .hamburger-lines .line {
+  background: white;
 }
 .dark-mode header .ToTopButton {
   filter: invert(1);
@@ -414,13 +506,16 @@ footer {
     width: 2%;
   }
 }
+.header__shoppingBag {
+  position: relative;
+}
 .header__shoppingBag .basketButton {
   position: relative;
 }
 .header__shoppingBag .basketButton .countBasket {
   position: absolute;
-  top: 35px;
-  right: 15px;
+  top: 25px;
+  right: 8px;
   background-color: #ff1616;
   font-family: "Roboto", sans-serif;
   font-size: 0.7em;
@@ -429,16 +524,21 @@ footer {
 }
 
 .basketContent {
+  position: absolute;
+  top: 50px;
+  right: 25px;
   background-color: white;
   color: black;
   display: flex;
   font-family: "Roboto", sans-serif;
   font-size: 0.7em;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   padding: 10px 10px;
   border-radius: 10px;
+  align-items: center;
+  justify-content: center;
 }
 .basketContent .totalBasket {
   text-align: right;
