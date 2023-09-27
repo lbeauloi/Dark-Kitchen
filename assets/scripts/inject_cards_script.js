@@ -11,10 +11,10 @@ function generateMenuItem(category, menuData) {
       <figure class="card__figure">
         <img src="${dish.affiche}" alt="${dish.name}">
       </figure>
-      <h3>${dish.name}</h3>
+      <h3 class="itemName">${dish.name}</h3>
       <div class="card__footer">
-        <p>${dish.prix}€</p>
-        <button class = "addToBasket"><img src="assets/img/addToBag.png" alt="Add to Bag"></button>
+        <p class="itemPrice">${dish.prix}€</p>
+        <button class = "addToBasket" product_id="${dish.productId}"><img src="assets/img/addToBag.png" alt="Add to Bag"></button>
       </div>
     `;
 
