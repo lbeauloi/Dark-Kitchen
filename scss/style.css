@@ -343,6 +343,9 @@ body {
   background-color: #20222e;
   color: white;
 }
+.dark-mode header .ToTopButton {
+  filter: invert(1);
+}
 .dark-mode .card {
   background-color: #313446;
   color: white;

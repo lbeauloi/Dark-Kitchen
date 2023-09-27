@@ -19,10 +19,22 @@ body{
     display:block;
   }
 }
+//dark mode : by adding the class dark-mode to the body
+// we haved recreated a bem like structure for the dark mode
+// we have to add the class dark-mode to the body to activate it
+// and then the dark mode will be applied to all the children of the body
+// its why we have to use the & selector to target the children of the body
+// under the dark-mode class
+// it work like a media query
 .dark-mode{
   transition: 350ms ease-in-out;
   background-color: #20222e;
   color: white;
+  header{  
+    .ToTopButton{
+      filter: invert(1);
+    }
+  }  
   .card{
     background-color: #313446;
     color: white;
