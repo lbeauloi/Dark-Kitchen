@@ -121,7 +121,7 @@ const desserts = [
     },
     {
         productId: 20,
-        ame: "Pêches roties",
+        name: "Pêches roties",
         prix: 14,
         affiche: "assets/img/peches_roties.webp",
     },
