@@ -141,6 +141,11 @@ font-weight value from 100 to 900 and italic style available
 .menuBurger__Wrapper img {
   width: 10vw;
 }
+@media screen and (min-width: 768px) {
+  .menuBurger__Wrapper img {
+    display: none;
+  }
+}
 
 .menuBurger__Wrapper:hover .menu-content {
   display: block;
@@ -314,12 +319,6 @@ body {
   background-color: #EBE3D9;
   display: flex;
   flex-direction: column;
-}
-
-@media screen and (min-width: 769px) {
-  .hiddenDesktop {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 769px) {
