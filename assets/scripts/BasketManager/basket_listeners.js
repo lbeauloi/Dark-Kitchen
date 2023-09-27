@@ -1,11 +1,26 @@
-﻿import{GetBasketItemFromCard, IncrementBasketItemCount, DecrementBasketItemCount, AddItemToBasket, } from "./items_manager.js";
+﻿import {GetBasketItemFromCard, IncrementBasketItemCount, DecrementBasketItemCount, AddItemToBasket,} from "./items_manager.js";
 import {DisplayItemCount, DisplayTotalPrice} from "./total_counts.js";
+
 //Get all "add" button from card elements
 let addButtons = document.querySelectorAll(".addToBasket");
+let basketButton = document.querySelector(".basketButton");
+let basketContent = document.querySelector(".basketContent");
+
+
 
 addItemListeners(addButtons);
+displayHideListener(basketButton, basketContent);
 
-function addItemListeners(addButtons){
+
+function displayHideListener(button, element) {
+    button.addEventListener('click', function () {
+
+        DisplayHiddeElement(element);
+
+    })
+}
+
+function addItemListeners(addButtons) {
     for (let btn of addButtons) {
         btn.addEventListener('click', function () {
 
@@ -52,4 +67,12 @@ function SetDecrementInBasketListener(basketItem) {
     });
 }
 
-export{SetIncrementInBasketListener, SetDecrementInBasketListener}
+function DisplayHiddeElement(element) {
+    if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+
+export {SetIncrementInBasketListener, SetDecrementInBasketListener}

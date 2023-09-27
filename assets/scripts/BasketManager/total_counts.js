@@ -62,7 +62,7 @@ function GetTotalPrice() {
 }
 
 function DisplayTotalPrice() {
-    document.querySelector(".totalBasket").innerText = GetTotalPrice();
+    document.querySelector(".totalBasket").innerText = `${GetTotalPrice()}$`;
 }
 
 export {DisplayItemCount, GetItemsCountInBasket, DisplayTotalPrice}
