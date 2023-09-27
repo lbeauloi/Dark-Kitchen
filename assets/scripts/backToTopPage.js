@@ -1,4 +1,4 @@
-// on masque le bouton de bas (logique on est deja au top de la page)
+// on masque le bouton de base (logique on est deja au top de la page)
 let backToTop = document.querySelector(".ToTopButton");
 backToTop.style.display = "none";
 
@@ -6,7 +6,8 @@ backToTop.style.display = "none";
 window.addEventListener("scroll", handleScroll);
 
 function handleScroll() {
-  if (window.pageYOffset > 250) { //on fait apparaitre le bouton dès que l'utilisateur a scroll de 250px
+  if (window.pageYOffset > 250) {
+    //on fait apparaitre le bouton dès que l'utilisateur a scroll de 250px verticalement
     backToTop.style.display = "block";
   } else {
     backToTop.style.display = "none"; //si l'utilisateur n'a pas scroll> 250px, le display reste sur none
@@ -17,4 +18,3 @@ function handleScroll() {
 backToTop.addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
-
