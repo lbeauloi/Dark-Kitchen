@@ -1,12 +1,10 @@
 ﻿//Get all "add" button
 let addToBasketBtns = document.querySelectorAll(".addToBasket");
-let basketCount = 0;
 
 //EventListener to add an item in the basket
 for (let btn of addToBasketBtns) {
     btn.addEventListener('click', function () {
 
-        basketCount++;
         let currentCard = btn.closest(".card");
 
         //check if item already exists in basket 
@@ -20,6 +18,8 @@ for (let btn of addToBasketBtns) {
             addItemToBasket(currentCard.querySelector(".itemName").innerText, currentCard.querySelector(".itemPrice").innerText);
         }
 
+        //update total item count;
+        displayItemCount();
 
     })
 }
@@ -51,6 +51,8 @@ function setIncrementInBasketListener(basketItem) {
     basketItem.querySelector(".addItem").addEventListener('click', function () {
 
         incrementBasketItemCount(basketItem);
+        //update total item count;
+        displayItemCount();
     });
 }
 
@@ -59,6 +61,8 @@ function SetDecrementInBasketListener(basketItem) {
     basketItem.querySelector(".removeItem").addEventListener('click', function () {
 
         DecrementBasketItemCount(basketItem);
+        //update total item count;
+        displayItemCount();
     });
 }
 
@@ -85,6 +89,44 @@ function GetBasketItemFromCard(card) {
 
     return Array.from(basketItems)
         .find(i => i.querySelector(".itemName").innerText === card.querySelector(".itemName").innerText.split(' ')[0]);
+}
+
+//Display the total count on the basket element
+function displayItemCount(){
+    
+    let totalCount = GetItemsCountInBasket();
+    let basketElement = document.querySelector(".basketButton");
+    let countBasketElement = basketElement.querySelector(".countBasket");
+    
+    //If nothing in basket, remove total count element from html
+    if(totalCount<1){
+        countBasketElement.remove();
+    }
+    else{
+        //If one or more element -- create total count element is does not exist and then put the total count in it
+        if(countBasketElement === null){
+            countBasketElement = document.createElement('div');
+            countBasketElement.classList.add("countBasket");
+            basketElement.appendChild(countBasketElement);            
+        }
+        document.querySelector(".countBasket").innerText=GetItemsCountInBasket();
+    }
+
+}
+
+//get the total items count in the basket
+function GetItemsCountInBasket(){
+    
+    let totalCount=0;
+    let allBasketItemsCount = document.querySelectorAll(".basketContent>.basketItem>.itemCount");
+    
+    for(let count of allBasketItemsCount){
+        
+        totalCount+=Number(count.innerText);
+    }
+    
+    return totalCount;
+
 }
 
 
