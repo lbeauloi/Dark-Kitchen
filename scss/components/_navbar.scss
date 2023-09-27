@@ -29,19 +29,28 @@
 
   img {
     width: 10vw;
+    @media screen and (min-width:768px){
+      display:none;
+    }
   }
+
 }
 
 .menuBurger__Wrapper:hover {
   .menu-content {
     display: block;
   }
-
 }
 
 //Menu content
 .menu-content {
   display: none;
+  
+  @media screen and (min-width: 768px) {
+    
+    display: block;
+    
+  }
   margin-bottom: 15%;
 
   ul {

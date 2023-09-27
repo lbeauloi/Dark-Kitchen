@@ -8,112 +8,121 @@
     <script src="assets/scripts/data.js"></script>
     <script async defer src="assets/scripts/inject_cards_script.js"></script>
     <script async defer src="assets/scripts/sort_cards_script.js"></script>
+    <script async defer src="assets/scripts/darkmode.js"></script>
+    <script async defer src="assets/scripts/backToTopPage.js"></script>
     <script async defer type="module" src="assets/scripts/BasketManager/basket_listeners.js"></script>
 </head>
-<body>
-<header>
-    <div class="menuLogo__Wrapper">
+  <body>
+    <header>
+      <button class="ToTopButton"></button>
+      < class="menuLogo__Wrapper">
         <div class="header-logo__Wrapper">
-            <img
-                    class="header__logo"
-                    src="assets/img/logo.png"
-                    alt="logo de notre resto, représente une fourchette et un couteau"
-            />
+          <img
+            class="header__logo"
+            src="assets/img/logo.png"
+            alt="logo de notre resto, représente une fourchette et un couteau"
+          />
         </div>
 
         <div class="menuBurger__Wrapper">
-            <img class="hiddenDesktop" src="assets/img/burgermenu.svg"/>
-            <div class="menu-content displayDesktop">
-                <!-- <a class="burgerButton" href="#"><img src="assets/img/burgermenu.svg" alt="burgermenu icon"></a> -->
-                <ul class="center">
-                    <li class="starterButton">
-                        <button class="sortingButton starter">
-                            <img src="assets/img/sortingStarter.svg" alt="starterIcon"/>
-                            <span>Starters</span>
-                        </button>
-                    </li>
-                    <li class="disheButton">
-                        <button class="sortingButton dish">
-                            <img src="assets/img/sortingDish.svg" alt="disheIcon"/>
-                            <span>Dishes</span>
-                        </button>
-                    </li>
-                    <li class="dessertButton">
-                        <button class="sortingButton dessert">
-                            <img src="assets/img/sortingDesserts.svg" alt="dessertIcon"/>
-                            <span>Desserts</span>
-                        </button>
-                    </li>
-                    <li class="allButton">
-                        <button class="sortingButton all">
-                            <img
-                                    src="assets/img/sortingAll.svg"
-                                    alt="knife and fork icon"
-                            />
-                            <span>All</span>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+          <img class="menuBurgerImg" src="assets/img/burgermenu.svg" />
+          <div class="menu-content">
+            <!-- <a class="burgerButton" href="#"><img src="assets/img/burgermenu.svg" alt="burgermenu icon"></a> -->
+            <ul class="center">
+              <li class="starterButton">
+                <button class="sortingButton starter">
+                  <img src="assets/img/sortingStarter.svg" alt="starterIcon" />
+                  <span>Starters</span>
+                </button>
+              </li>
+              <li class="disheButton">
+                <button class="sortingButton dish">
+                  <img src="assets/img/sortingDish.svg" alt="disheIcon" />
+                  <span>Dishes</span>
+                </button>
+              </li>
+              <li class="dessertButton">
+                <button class="sortingButton dessert">
+                  <img src="assets/img/sortingDesserts.svg" alt="dessertIcon" />
+                  <span>Desserts</span>
+                </button>
+              </li>
+              <li class="allButton">
+                <button class="sortingButton all">
+                  <img
+                    src="assets/img/sortingAll.svg"
+                    alt="knife and fork icon"
+                  />
+                  <span>All</span>
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div class="header__shoppingBag">
             <button class="basketButton">
                 <img src="assets/img/shopping-bag.png" alt="shopping shopping-bag icon"/>
-<!--                <div class="countBasket">0</div>-->
             </button>
 
             <div class="basketContent">
                 <p class="totalBasket">Total price of basket</p>
             </div>
-
+           
         </div>
+      
+        <div class="toggle-switch">
+            <label class="switch-label">
+                <input type="checkbox" id="toggleSwitch" class="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>       
+        
+        
+        
+      <div class="header__ImgRestoWrapper"></div>
+    </header>
+    <main class="menu__container">
+      <section class="menu__starter"></section>
+      <section class="menu__mainDish"></section>
+      <section class="menu__dessert"></section>
+    </main>
 
-
-    </div>
-    <div class="header__ImgRestoWrapper displayDesktop"></div>
-</header>
-<main class="menu__container">
-    <section class="menu__starter"></section>
-    <section class="menu__mainDish"></section>
-    <section class="menu__dessert"></section>
-</main>
-
-<footer class="center">
-    <img alt="Logo" src="assets/img/logo.png" class="c-footer__logo"/>
-    <div class="c-footer__linksWrapper">
+    <footer class="center">
+      <img alt="Logo" src="assets/img/logo.png" class="c-footer__logo" />
+      <div class="c-footer__linksWrapper">
         <ul>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Terms And Conditions</a></li>
-            <li><a href="">Contact Us</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Terms And Conditions</a></li>
+          <li><a href="">Contact Us</a></li>
         </ul>
-    </div>
-    <div class="c-footer__followUsWrapper">
+      </div>
+      <div class="c-footer__followUsWrapper">
         <p class="c-footer__followUsText">Follow Us!</p>
         <ul class="c-footer__iconWrapper">
-            <li class="footer__iconsItem">
-                <img
-                        src="./assets/img/facebook.svg"
-                        alt="facebookIcon"
-                        class="footer__icons"
-                />
-            </li>
-            <li class="footer__iconsItem">
-                <img
-                        src="./assets/img/instagram.svg"
-                        alt="instagramIcon"
-                        class="footer__icons"
-                />
-            </li>
-            <li class="footer__iconsItem">
-                <img
-                        src="./assets/img/twitter.svg"
-                        alt="twitterIcon"
-                        class="footer__icons"
-                />
-            </li>
+          <li class="footer__iconsItem">
+            <img
+              src="./assets/img/facebook.svg"
+              alt="facebookIcon"
+              class="footer__icons"
+            />
+          </li>
+          <li class="footer__iconsItem">
+            <img
+              src="./assets/img/instagram.svg"
+              alt="instagramIcon"
+              class="footer__icons"
+            />
+          </li>
+          <li class="footer__iconsItem">
+            <img
+              src="./assets/img/twitter.svg"
+              alt="twitterIcon"
+              class="footer__icons"
+            />
+          </li>
         </ul>
-    </div>
-</footer>
-</body>
+      </div>
+    </footer>
+  </body>
 </html>
