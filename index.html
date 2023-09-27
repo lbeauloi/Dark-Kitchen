@@ -5,42 +5,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dark Kitchen Project</title>
-    <script src="assets/scripts/data.js"></script>
-    <script async defer src="assets/scripts/inject_cards_script.js"></script>
-    <script async defer src="assets/scripts/sort_cards_script.js"></script>
-    <script async defer src="assets/scripts/darkmode.js"></script>
-    <script async defer src="assets/scripts/backToTopPage.js"></script>
+    <script defer type="module" src="main.js"></script>
   </head>
   <body>
     <header>
       <button class="ToTopButton"></button>
-      <div class="menuLogo__Wrapper">
-        <div class="header-logo__Wrapper">
-          <img
-            class="header__logo"
-            src="assets/img/logo.png"
-            alt="logo de notre resto, représente une fourchette et un couteau"
-          />
+      <nav class="navbar">
+        <div class="navbar__leftWrapper">
+          <div class="navbar__leftWrapper__logoWrapper">
+            <img
+              class="navbar__leftWrapper__logoWrapper__logo"
+              src="assets/img/logo.png"
+              alt="logo de notre resto, représente une fourchette et un couteau"
+            />
+          </div>
+          <div class="navbar__leftWrapper__toggle toggle-switch">
+            <label class="switch-label">
+              <input type="checkbox" id="toggleSwitch" class="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
         </div>
+        <div class="navbar__rightWrapper">
+          <div class="header__shoppingBag">
+            <button class="basketButton">
+              <img
+                src="assets/img/shopping-bag.png"
+                alt="shopping shopping-bag icon"
+              />
+            </button>
 
-        <div class="menuBurger__Wrapper">
-          <img class="menuBurgerImg" src="assets/img/burgermenu.svg" />
-          <div class="menu-content">
+            <div class="basketContent">
+              <p class="totalBasket">Total: 0 &euro;</p>
+            </div>
+          </div>
+          <div class="navbar__rightWrapper__menuBurgerWrapper">
+            <input class="hamburger" type="checkbox" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>
             <!-- <a class="burgerButton" href="#"><img src="assets/img/burgermenu.svg" alt="burgermenu icon"></a> -->
-            <ul class="center">
-              <li class="starterButton">
+            <ul class="menu-items">
+              <li>
                 <button class="sortingButton starter">
                   <img src="assets/img/sortingStarter.svg" alt="starterIcon" />
                   <span>Starters</span>
                 </button>
               </li>
-              <li class="disheButton">
+              <li>
                 <button class="sortingButton dish">
                   <img src="assets/img/sortingDish.svg" alt="disheIcon" />
                   <span>Dishes</span>
                 </button>
               </li>
-              <li class="dessertButton">
+              <li>
                 <button class="sortingButton dessert">
                   <img src="assets/img/sortingDesserts.svg" alt="dessertIcon" />
                   <span>Desserts</span>
@@ -58,25 +78,8 @@
             </ul>
           </div>
         </div>
-
-        <div class="header__shoppingBag">
-          <button class="basketButton">
-            <img
-              src="assets/img/shopping-bag.png"
-              alt="shopping shopping-bag icon"
-            />
-          </button>
-        </div>
-      </div>
-
-        <div class="toggle-switch">
-            <label class="switch-label">
-                <input type="checkbox" id="toggleSwitch" class="checkbox">
-                <span class="slider"></span>
-            </label>
-        </div>
-        
-        <div class="header__ImgRestoWrapper"></div>
+      </nav>
+      <div class="header__ImgRestoWrapper displayDesktop"></div>
     </header>
     <main class="menu__container">
       <section class="menu__starter"></section>

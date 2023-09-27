@@ -1,0 +1,50 @@
+﻿.header__shoppingBag {
+position: relative;
+  .basketButton {
+    position: relative;
+    
+    .countBasket {
+      position: absolute;
+      top: 25px;
+      right: 8px;
+      background-color: #ff1616;
+      font-family: $card-font-family;
+      font-size: 0.7em;
+      border-radius: 100%;
+      padding: 2px 2px;
+    }
+  }
+}
+.basketContent{
+  position: absolute;
+  top: 50px;
+  right: 25px;
+  background-color: white;
+  color:black;
+  display: flex;
+  font-family: $card-font-family;
+  font-size: 0.7em;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  padding: 10px 10px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+
+.totalBasket {
+  text-align: right;
+}
+}
+
+.basketItem{
+  display: flex;
+  flex-direction: row;
+  color:black;
+  
+  
+  button{
+    width:15px;
+    height:auto;
+  }
+}

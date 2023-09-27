@@ -7,10 +7,7 @@ body{
 }
 
 
-.hiddenDesktop{
 
-
-}
 
 .displayDesktop{
   @media screen and (min-width:769px){
@@ -28,17 +25,14 @@ body{
   transition: 350ms ease-in-out;
   background-color: #20222e;
   color: white;
+  .hamburger-lines .line{
+    background: white;
+  }
   header{  
     .ToTopButton{
       filter: invert(1);
     }
-    .menuLogo__Wrapper{
-      .menuBurger__Wrapper{
-        .menuBurgerImg{
-          filter: invert(1);
-        }
-      }
-    }
+    
   }  
   .card{
     background-color: #313446;
