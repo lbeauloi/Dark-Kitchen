@@ -350,6 +350,9 @@ body {
 .dark-mode header .ToTopButton {
   filter: invert(1);
 }
+.dark-mode header .menuLogo__Wrapper .menuBurger__Wrapper .menuBurgerImg {
+  filter: invert(1);
+}
 .dark-mode .card {
   background-color: #313446;
   color: white;

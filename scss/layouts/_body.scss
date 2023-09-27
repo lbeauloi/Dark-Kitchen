@@ -32,6 +32,13 @@ body{
     .ToTopButton{
       filter: invert(1);
     }
+    .menuLogo__Wrapper{
+      .menuBurger__Wrapper{
+        .menuBurgerImg{
+          filter: invert(1);
+        }
+      }
+    }
   }  
   .card{
     background-color: #313446;
