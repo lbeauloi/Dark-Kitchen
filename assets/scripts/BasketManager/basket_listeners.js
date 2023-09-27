@@ -19,7 +19,7 @@ function addItemListeners(addButtons){
                 IncrementBasketItemCount(basketItem);
             } else {
                 //If not - create item
-                AddItemToBasket(currentCard.querySelector(".itemName").innerText, currentCard.querySelector(".itemPrice").innerText);
+                AddItemToBasket(Number(currentCard.querySelector("button.addToBasket").getAttribute("product_id")));
             }
 
             //update total item count;

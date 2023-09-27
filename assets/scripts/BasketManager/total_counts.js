@@ -1,71 +1,63 @@
-﻿
-
-//Display the total count on the basket element
-function DisplayItemCount(){
+﻿//Display the total count on the basket element
+function DisplayItemCount() {
 
     let totalCount = GetItemsCountInBasket();
+
     let basketElement = document.querySelector(".basketButton");
     let countBasketElement = basketElement.querySelector(".countBasket");
 
     //If nothing in basket, remove total count element from html
-    if(totalCount<1){
+    if (totalCount < 1) {
         countBasketElement.remove();
-    }
-    else{
+    } else {
         //If one or more element -- create total count element is does not exist and then put the total count in it
-        if(countBasketElement === null){
+        if (countBasketElement === null) {
             countBasketElement = document.createElement('div');
             countBasketElement.classList.add("countBasket");
             basketElement.appendChild(countBasketElement);
         }
-        document.querySelector(".countBasket").innerText=GetItemsCountInBasket();
+        document.querySelector(".countBasket").innerText = GetItemsCountInBasket();
     }
 
 }
 
 //get the total items count in the basket
-function GetItemsCountInBasket(){
+function GetItemsCountInBasket() {
 
-    let totalCount=0;
+    let totalCount = 0;
     let allBasketItemsCount = document.querySelectorAll(".basketContent>.basketItem>.itemCount");
 
-    for(let count of allBasketItemsCount){
+    for (let count of allBasketItemsCount) {
 
-        totalCount+=Number(count.innerText);
+        totalCount += Number(count.innerText);
     }
 
     return totalCount;
 
 }
 
-function GetTotalPrice(){
-    
+function FindProduct(productId) {
+    return (entree.concat(plat, desserts)).find(i => i.productId === productId);
+}
+
+function GetTotalPrice() {
+
     let totalPrice = 0;
-    
-    if(GetItemsCountInBasket() === 0){
+
+    if (GetItemsCountInBasket() === 0) {
         return 0;
     }
+ 
 
-    const priceRegex = /[0-9]{1,2}/g;
-    // let subPrices = Array.from(document.querySelectorAll(".basketContent>.basketItem")).reduce((a,c) => 
-    //     a + ((Number(c.querySelector(".itemCount").innerText))*(Number(c.querySelector(".itemPrice").innerText.trim().split(priceRegex)))),0
-    //     );
+    let items = Array.from(document.querySelectorAll(".basketContent>.basketItem"));
 
-    //debug
-    
-    let arr = Array.from(document.querySelectorAll(".basketContent>.basketItem"));
-    let itemCount = arr[0].querySelector(".itemCount").innerText;
-    let itemPrice= arr[0].querySelector(".itemPrice").innerText.trim().split(priceRegex);
-    
-    let pr = arr.map((x) =>
-        Number(x.querySelector(".itemCount").innerText) * Number(x.querySelector(".itemPrice").innerText.trim().split(priceRegex)));
-    
-    let subPrices = Array.from(document.querySelectorAll(".basketContent>.basketItem")).map((x) => 
-        Number(x.querySelector(".itemCount").innerText) * Number(x.querySelector(".itemPrice").innerText.trim().split(priceRegex)) );
-    
-    for(let p of subPrices){
-        totalPrice+=p;
+    for (let i of items) {
+
+        let itemCount = Number(i.querySelector(".itemCount").innerText);
+        let productPrice = FindProduct(Number(i.querySelector("p.itemName").getAttribute("product_id"))).prix;
+        totalPrice+=(itemCount*productPrice);
     }
+
     return totalPrice;
 }
 

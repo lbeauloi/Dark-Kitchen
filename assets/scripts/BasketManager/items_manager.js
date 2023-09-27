@@ -1,15 +1,17 @@
 ﻿import{SetDecrementInBasketListener, SetIncrementInBasketListener} from "./basket_listeners.js";
 
-function AddItemToBasket(itemName, itemPrice) {
+function AddItemToBasket(productId) {
 
     let basketContent = document.querySelector(".basketContent");
+    
+    let product =(entree.concat(plat,desserts)).find(i => i.productId === productId);
 
     //create item
     let basketItem = document.createElement('div');
     basketItem.classList.add("basketItem");
     basketItem.innerHTML = `
-              <p class="itemName"> ${itemName.split(" ")[0]}</p>
-              <p class="unitaryPrice">${itemPrice}</p>
+              <p class="itemName" product_id="${product.productId}"> ${product.name.split(" ")[0]}</p>
+              <p class="unitaryPrice">${product.prix}$</p>
               <button class="removeItem">-</button>
               <p class="itemCount">1</p>
               <button class="addItem">+</button>`
@@ -46,7 +48,7 @@ function GetBasketItemFromCard(card) {
     let basketItems = document.querySelectorAll(".basketContent>.basketItem");
 
     return Array.from(basketItems)
-        .find(i => i.querySelector(".itemName").innerText === card.querySelector(".itemName").innerText.split(' ')[0]);
+        .find(i => Number(i.querySelector(".itemName").getAttribute("product_id")) === Number(card.querySelector("button.addToBasket").getAttribute("product_id")));
 }
 
 
