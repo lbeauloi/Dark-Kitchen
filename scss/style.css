@@ -161,6 +161,11 @@ font-weight value from 100 to 900 and italic style available
 .menuBurger__Wrapper img {
   width: 10vw;
 }
+@media screen and (min-width: 768px) {
+  .menuBurger__Wrapper img {
+    display: none;
+  }
+}
 
 .menuBurger__Wrapper:hover .menu-content {
   display: block;
@@ -169,6 +174,11 @@ font-weight value from 100 to 900 and italic style available
 .menu-content {
   display: none;
   margin-bottom: 15%;
+}
+@media screen and (min-width: 768px) {
+  .menu-content {
+    display: block;
+  }
 }
 .menu-content ul {
   margin-top: 2%;
@@ -327,12 +337,6 @@ body {
 }
 
 @media screen and (min-width: 769px) {
-  .hiddenDesktop {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 769px) {
   .displayDesktop {
     display: block;
   }
@@ -363,13 +367,18 @@ header {
 
 .header__ImgRestoWrapper {
   height: 150px;
-  background-image: url("/assets/img/resto.png");
+  background-image: url("../assets/img/resto.png");
   background-size: cover;
   background-position: 0 89%;
   border-radius: 10px;
   background-repeat: no-repeat;
   display: none;
   margin: 2%;
+}
+@media screen and (min-width: 768px) {
+  .header__ImgRestoWrapper {
+    display: block;
+  }
 }
 
 .menu__container {
