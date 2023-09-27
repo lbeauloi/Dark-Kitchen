@@ -1,5 +1,5 @@
 ﻿import{GetBasketItemFromCard, IncrementBasketItemCount, DecrementBasketItemCount, AddItemToBasket, } from "./items_manager.js";
-import {DisplayItemCount} from "./total_counts.js";
+import {DisplayItemCount, DisplayTotalPrice} from "./total_counts.js";
 //Get all "add" button from card elements
 let addButtons = document.querySelectorAll(".addToBasket");
 
@@ -24,6 +24,7 @@ function addItemListeners(addButtons){
 
             //update total item count;
             DisplayItemCount();
+            DisplayTotalPrice();
 
         })
     }
@@ -36,6 +37,7 @@ function SetIncrementInBasketListener(basketItem) {
         IncrementBasketItemCount(basketItem);
         //update total item count;
         DisplayItemCount();
+        DisplayTotalPrice();
     });
 }
 
@@ -46,6 +48,7 @@ function SetDecrementInBasketListener(basketItem) {
         DecrementBasketItemCount(basketItem);
         //update total item count;
         DisplayItemCount();
+        DisplayTotalPrice();
     });
 }
 
