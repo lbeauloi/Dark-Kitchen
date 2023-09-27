@@ -1,10 +1,11 @@
-let starter = document.querySelector(".menu__starter");
-let main = document.querySelector(".menu__mainDish");
-let sugar = document.querySelector(".menu__dessert");
+import{entree,plat,desserts} from "./data.js";
+// let starter = document.querySelector(".menu__starter");
+// let main = document.querySelector(".menu__mainDish");
+// let sugar = document.querySelector(".menu__dessert");
 
 function generateMenuItem(category, menuData) {
   const menuSection = document.querySelector(`.menu__${category}`);
-  
+
   menuData.forEach((dish) => {
     const article = document.createElement("article");
     article.innerHTML = `
@@ -29,4 +30,4 @@ function generateAll() {
   generateMenuItem("dessert", desserts);
 }
 
-generateAll();
+export{generateAll};

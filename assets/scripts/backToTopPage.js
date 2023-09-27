@@ -1,11 +1,24 @@
-// on masque le bouton de base (logique on est deja au top de la page)
-let backToTop = document.querySelector(".ToTopButton");
-backToTop.style.display = "none";
 
-// eventlistener pour afficher le bouton dès que l'utilisateur scroll
-window.addEventListener("scroll", handleScroll);
+
+function backToTopListeners(){
+
+  // on masque le bouton de base (logique on est deja au top de la page)
+  let backToTop = document.querySelector(".ToTopButton");
+  backToTop.style.display = "none";
+  
+  // eventlistener pour afficher le bouton dès que l'utilisateur scroll
+  window.addEventListener("scroll", handleScroll);
+
+  // eventlistener pour quand on clique sur le bouton
+  backToTop.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
 function handleScroll() {
+
+  // on masque le bouton de base (logique on est deja au top de la page)
+  let backToTop = document.querySelector(".ToTopButton");
   if (window.pageYOffset > 250) {
     //on fait apparaitre le bouton dès que l'utilisateur a scroll de 250px verticalement
     backToTop.style.display = "block";
@@ -14,7 +27,8 @@ function handleScroll() {
   }
 }
 
-// eventlistener pour quand on clique sur le bouton
-backToTop.addEventListener("click", function () {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+export{backToTopListeners}
+
+
+
+

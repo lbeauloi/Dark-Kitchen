@@ -1,23 +1,27 @@
-const buttonStarter = document.querySelector(".starter");
-const buttonDish = document.querySelector(".dish");
-const buttonDessert = document.querySelector(".dessert");
-const buttonAll = document.querySelector(".all");
+function AddSortingListeners(){
 
-buttonStarter.addEventListener("click", () => {
+  const buttonStarter = document.querySelector(".starter");
+  const buttonDish = document.querySelector(".dish");
+  const buttonDessert = document.querySelector(".dessert");
+  const buttonAll = document.querySelector(".all");
+  
+  buttonStarter.addEventListener("click", () => {
     filterMenuByCategory("starter");
   });
-  
+
   buttonDish.addEventListener("click", () => {
     filterMenuByCategory("mainDish");
   });
-  
+
   buttonDessert.addEventListener("click", () => {
     filterMenuByCategory("dessert");
   });
-  
+
   buttonAll.addEventListener("click", () => {
     showAllMenuItems();
   });
+}
+
   
   function hideAllMenuItems() {
     const menuSections = document.querySelectorAll(".menu__container section");
@@ -43,3 +47,4 @@ buttonStarter.addEventListener("click", () => {
     categorySection.style.display = "flex";
   }
   
+  export {AddSortingListeners};
