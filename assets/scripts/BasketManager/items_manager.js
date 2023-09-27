@@ -21,10 +21,8 @@ function AddItemToBasket(productId) {
     SetDecrementInBasketListener(basketItem);
 
     //Add item to basket
-    basketContent.appendChild(basketItem);
+    basketContent.insertBefore(basketItem, basketContent.querySelector(".totalBasket"));
 }
-
-
 
 function IncrementBasketItemCount(basketItem) {
 
